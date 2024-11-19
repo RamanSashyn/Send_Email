@@ -1,89 +1,46 @@
-﻿# Персонализированные Email-сообщения с Python и SMTP
+﻿Этот проект позволяет отправлять персонализированные email-сообщения с использованием Python и SMTP. Используются переменные окружения для защиты чувствительных данных, таких как логин и пароль.
 
-Этот проект позволяет отправлять персонализированные email-сообщения с использованием Python и SMTP. Используются переменные окружения для защиты чувствительных данных, таких как логин и пароль.
+Установка
+Клонируйте репозиторий:
+`git clone https://github.com/your-username/your-repo.git
 
-## Установка
+cd your-repo`
 
-1. Клонируйте репозиторий:
+Создайте виртуальное окружение:
+`python -m venv .venv
 
-    ```bash
-    git clone https://github.com/your-username/your-repo.git
-    cd your-repo
-    ```
+source .venv/bin/activate # для Linux/MacOS
 
-2. Создайте виртуальное окружение:
+.venv\Scripts\activate # для Windows`
 
-    ```bash
-    python -m venv .venv
-    ```
+Установите зависимости:
+pip install -r requirements.txt
 
-    Для активации виртуального окружения:
-    
-    - **Linux/MacOS**:
-    
-    ```bash
-    source .venv/bin/activate
-    ```
-    
-    - **Windows**:
-    
-    ```bash
-    .venv\Scripts\activate
-    ```
+Создайте файл .env:
+Скопируйте файл .env_example в .env:
+cp .env_example .env # Linux/MacOS copy .env_example .env # Windows
+Заполните файл .env реальными данными:
+`EMAIL_LOGIN=your_email@gmail.com
 
-3. Установите зависимости:
+PASSWORD=your_password`
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+Запустите код:
+python main.py
 
-4. Создайте файл `.env`:
-
-    Скопируйте файл `.env_example` в `.env`:
-
-    - **Linux/MacOS**:
-    
-    ```bash
-    cp .env_example .env
-    ```
-
-    - **Windows**:
-    
-    ```bash
-    copy .env_example .env
-    ```
-
-5. Заполните файл `.env` реальными данными:
-
-    ```env
-    EMAIL_LOGIN=your_email@gmail.com
-    PASSWORD=your_password
-    ```
-
-6. Запустите код:
-
-    ```bash
-    python main.py
-    ```
-
-## Структура проекта
+Структура проекта
 `Sendingemails/
 ├── .venv/
 ├── main.py
 ├── .env_example
 ├── .gitignore
 
+Персонализация email
+Вы можете изменить текст письма в файле main.py. Переменные friend_name, my_name и site_url заменяются на реальные значения.
 
-## Персонализация email
-
-Вы можете изменить текст письма в файле `main.py`. Переменные `friend_name`, `my_name` и `site_url` заменяются на реальные значения.
-
-## Конфигурация SMTP
-
+Конфигурация SMTP
 Для отправки email через Gmail используется:
 
-- SMTP-сервер: `smtp.gmail.com`
-- Порт: `465`
+SMTP-сервер: smtp.gmail.com
+Порт: 465
 
 Убедитесь, что у вашей учетной записи Gmail включен доступ для менее защищенных приложений или настроен OAuth2.
-
