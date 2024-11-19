@@ -2,30 +2,35 @@
 
 Установка
 Клонируйте репозиторий:
-`git clone https://github.com/your-username/your-repo.git
+"""git clone https://github.com/your-username/your-repo.git
 
-cd your-repo`
+cd your-repo
+"""
 
 Создайте виртуальное окружение:
-`python -m venv .venv
+"""python -m venv .venv
 
 source .venv/bin/activate # для Linux/MacOS
 
-.venv\Scripts\activate # для Windows`
+.venv\Scripts\activate # для Windows
+"""
 
 Установите зависимости:
-pip install -r requirements.txt
+"""pip install -r requirements.txt
+"""
 
 Создайте файл .env:
 Скопируйте файл .env_example в .env:
 cp .env_example .env # Linux/MacOS copy .env_example .env # Windows
 Заполните файл .env реальными данными:
-`EMAIL_LOGIN=your_email@gmail.com
+"""EMAIL_LOGIN=your_email@gmail.com
 
-PASSWORD=your_password`
+PASSWORD=your_password
+"""
 
 Запустите код:
-python main.py
+"""python main.py
+"""
 
 Структура проекта
 `Sendingemails/
