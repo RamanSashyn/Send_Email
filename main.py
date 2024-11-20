@@ -41,15 +41,14 @@ text_email = text_email.replace("%website%", site_url)
 text_email = text_email.replace("%friend_name%", friend_name)
 text_email = text_email.replace("%my_name%", my_name)
 
-letter = """
+letter = """\
 From: {sender_email}
 To: {email_to}
 Reply-To: {sender_email}
 Subject: {subject}
 Content-Type: text/plain; charset=utf-8
 
-{text}
-""".format(
+{text}""".format(
     sender_email=sender_email,
     email_to=email_to,
     subject=subject,
